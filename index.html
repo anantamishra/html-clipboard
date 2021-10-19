@@ -43,6 +43,8 @@
     </div>
 
     <div class="bottom-bar">
+      <img onclick="copyText();" class="small-icon" src="./assets/copy.png">
+      &nbsp;&nbsp;
       <img onclick="textarea.value=render.innerHTML='';" class="small-icon" src="./assets/eraser.png" />
       &nbsp;&nbsp;
       <img onclick="copy('anantamishra.github.io/html-clipboard?data='+btoa(textarea.value))" class="small-icon" src="./assets/share.png" />
@@ -75,6 +77,14 @@
       document.execCommand("copy");
       url.setAttribute("type", "hidden")
       alert("Url Copied to Clipboard");
+    }
+
+    function copyText(){
+      const text = document.getElementById("data");
+      text.select();
+      text.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Code Copied to Clipboard");
     }
   </script>
 </body>
