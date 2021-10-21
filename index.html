@@ -34,7 +34,7 @@
     <textarea id="data" onkeyup="change(this);">
 <style>
 
-</style>    
+</style>
   </textarea>
     <input type="hidden" id="url" />
     &nbsp;&nbsp;
@@ -73,16 +73,16 @@
       url.value = data;
       url.setAttribute("type", "text")
       url.select();
-      url.setSelectionRange(0, 99999);
+      url.setSelectionRange(0, data.length);
       document.execCommand("copy");
       url.setAttribute("type", "hidden")
       alert("Url Copied to Clipboard");
     }
 
-    function copyText(){
+    function copyText() {
       const text = document.getElementById("data");
       text.select();
-      text.setSelectionRange(0, 99999);
+      text.setSelectionRange(0, text.value.length);
       document.execCommand("copy");
       alert("Code Copied to Clipboard");
     }
