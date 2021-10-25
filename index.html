@@ -1,15 +1,13 @@
 <html>
-<head>
 
-  </head>
+<head>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
 
 <body style="height:100%;">
   <div style="display:flex;">
     <textarea id="data" onkeyup="change(this);">
-<style>
-
-</style>
-  </textarea>
+    </textarea>
     <input type="hidden" id="url" />
     &nbsp;&nbsp;
     <div id="html-render" style="flex:1;">
@@ -17,11 +15,12 @@
     </div>
 
     <div class="bottom-bar">
-      <img onclick="copyText();" class="small-icon" src="./assets/copy.png">
+      <img onclick="copyText();" class="small-icon" src="./assets/images/copy.png">
       &nbsp;&nbsp;
-      <img onclick="textarea.value=render.innerHTML='';" class="small-icon" src="./assets/eraser.png" />
+      <img onclick="textarea.value=render.innerHTML='';" class="small-icon" src="./assets/images/eraser.png" />
       &nbsp;&nbsp;
-      <img onclick="copy('anantamishra.github.io/html-clipboard?data='+btoa(textarea.value))" class="small-icon" src="./assets/share.png" />
+      <img onclick="copy('www.anantamishra.github.io/html-clipboard?data='+btoa(textarea.value))" class="small-icon"
+        src="./assets/images/share.png" />
     </div>
   </div>
 
