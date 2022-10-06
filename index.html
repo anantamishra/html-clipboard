@@ -4,16 +4,16 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body style="height:100%;">
-  <div style="display:flex;">
-    <textarea id="data" onkeyup="change(this);">
+<body>
+  <div class="container">
+    <textarea id="data" class="text-input" onkeyup="change(this);">
     </textarea>
     <input type="hidden" id="url" />
     &nbsp;&nbsp;
-    <div id="html-render" style="flex:1;">
-
+    <div id="html-render" class="html-render">
     </div>
-
+  </div>
+  <div class="bottom-bar-wrapper">
     <div class="bottom-bar">
       <img onclick="copyText();" class="small-icon" src="./assets/images/copy.png">
       &nbsp;&nbsp;
@@ -22,6 +22,7 @@
       <img onclick="copy('www.anantamishra.github.io/html-clipboard?data='+btoa(textarea.value))" class="small-icon"
         src="./assets/images/share.png" />
     </div>
+  </div>
   </div>
 
 
